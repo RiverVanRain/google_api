@@ -1,15 +1,26 @@
 {
 	"name": "rivervanrain/google_api",
 	"type": "elgg-plugin",
-    "license": "GNU Affero General Public License version 3",
+    "description": "Google API, Client and Services for Elgg",
+    "license": "AGPL-3.0-or-later",
+	"keywords": [
+		"development",
+		"google"
+	],
+	"homepage": "https://wzm.me",
+	"authors": [
+		{
+		  "name": "Nikolai Shcherbin",
+		  "email": "support@wzm.me"
+		}
+	],
 	"config": {
         "fxp-asset": {
             "enabled": false
         }
     },
 	"require": {
-		"php": ">=7.3",
-		"composer/installers": ">=1.0.8",
+		"composer/installers": "^1.0.8",
 		"google/apiclient": "^2.10.1"
 	},
 	"autoload": {
@@ -22,5 +33,11 @@
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
-    ]
+    ],
+	"conflict": {
+		"elgg/elgg": "<4.0"
+	},
+	"support": {
+		"source": "https://github.com/rivervanrain/google_api"
+	}
 }

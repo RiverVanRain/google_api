@@ -8,5 +8,5 @@
  * @link https://wzm.me
 **/
 return [
-	'google' => \DI\object(\wZm\Google\GoogleClient::class)
+	'google' => \DI\create(\wZm\Google\GoogleClient::class)
 ];

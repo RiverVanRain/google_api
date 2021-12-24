@@ -9,7 +9,7 @@
 **/
 namespace wZm\Google;
 
-use Elgg\Di\ServiceFacade;
+use Elgg\Traits\Di\ServiceFacade;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 class GoogleClient {
@@ -51,7 +51,7 @@ class GoogleClient {
 			'Content-Type' => 'application/json; charset=UTF-8',
 		], true, 'attachment');
 
-		$response->send();
+		$response->sendContent();
 		
 		// save plugin settings
 		$error = 0;
@@ -84,7 +84,7 @@ class GoogleClient {
 				}
 			}
 		}
-
+		
 		return $error;
 	}
 	

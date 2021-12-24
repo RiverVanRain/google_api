@@ -28,7 +28,7 @@ class ImportSettings {
 			return elgg_error_response(elgg_echo('google:api:import:error', [$errors]));
 		}
 
-		elgg_flush_caches();
+		elgg_clear_caches();
 
 		return elgg_ok_response('', elgg_echo('google:api:import:success'));
 	}

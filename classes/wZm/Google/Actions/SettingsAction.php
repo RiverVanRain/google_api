@@ -41,7 +41,7 @@ class SettingsAction {
 		}
 
 		if ($flush_cache) {
-			elgg_flush_caches();
+			elgg_clear_caches();
 		}
 
 		return elgg_ok_response('', elgg_echo('plugins:settings:save:ok', [$plugin_name]));

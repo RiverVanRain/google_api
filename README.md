@@ -1,6 +1,6 @@
 Google API
 ===============================
-![Elgg 3.3](https://img.shields.io/badge/Elgg-3.3-orange.svg?style=flat-square)
+![Elgg 4.0](https://img.shields.io/badge/Elgg-4.0-green.svg?style=flat-square)
 
 Google API, Client and Services for Elgg
 
@@ -45,3 +45,31 @@ $classMap = [
 
 ```
 
+### Usage
+
+Add Google API key and import Google JSON credentials.
+
+Now you can use Google services.
+
+Here is an example for Google Service Sheets:
+
+```php
+
+	// Get the API client and construct the service object.
+	$api_key = elgg_get_plugin_setting('api_key','google_api');
+	
+	// Initialize Google Client
+	$client = new \Google_Client();
+	$client->setDeveloperKey($api_key);
+	$client->setApplicationName('my_app');
+	$client->setScopes(\Google_Service_Sheets::SPREADSHEETS);
+	$client->setAccessType('offline');	
+	
+	// Authorize Google Client
+	$data = elgg_get_data_path() . 'google/google_key.json';
+	$client->setAuthConfig(json_decode($data, true));
+	
+	// Initialize Google service
+	$service = new \Google_Service_Sheets($client);
+	
+```

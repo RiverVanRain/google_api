@@ -9,6 +9,12 @@
 **/
 
 return [
+	'plugin' => [
+		'name' => 'Google API',
+		'version' => '0.3.0',
+		'activate_on_install' => false,
+	],
+	
 	'bootstrap' => \wZm\Google\Bootstrap::class,
 	
 	'actions' => [
