@@ -1,8 +1,8 @@
 {
 	"name": "rivervanrain/google_api",
 	"type": "elgg-plugin",
-    "description": "Google API, Client and Services for Elgg",
-    "license": "AGPL-3.0-or-later",
+        "description": "Google API, Client and Services for Elgg",
+        "license": "AGPL-3.0-or-later",
 	"keywords": [
 		"development",
 		"google"
@@ -15,25 +15,25 @@
 		}
 	],
 	"config": {
-        "fxp-asset": {
-            "enabled": false
-        }
-    },
+              "fxp-asset": {
+                   "enabled": false
+              }
+        },
 	"require": {
 		"composer/installers": "^1.0.8",
-		"google/apiclient": "^2.10.1"
+		"google/apiclient": "^2.12.2"
 	},
 	"autoload": {
 		"psr-0": {
 			"": "classes/"
 		}
 	},
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ],
+        "repositories": [
+                {
+                   "type": "composer",
+                   "url": "https://asset-packagist.org"
+                }
+        ],
 	"conflict": {
 		"elgg/elgg": "<4.0"
 	},
