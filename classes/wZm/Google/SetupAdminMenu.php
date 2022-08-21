@@ -9,10 +9,8 @@
 **/
 namespace wZm\Google;
 
-use Elgg\HooksRegistrationService\Hook;
-
 class SetupAdminMenu {
-	public function __invoke(Hook $hook) {
+	public function __invoke(\Elgg\Hook $hook) {
 		$menu = $hook->getValue();
 		/* @var $menu \Elgg\Collections\Collection */
 

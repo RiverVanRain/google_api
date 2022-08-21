@@ -1,6 +1,6 @@
 Google API
 ===============================
-![Elgg 4.0](https://img.shields.io/badge/Elgg-4.0-green.svg?style=flat-square)
+![Elgg 4.3](https://img.shields.io/badge/Elgg-4.3-green.svg?style=flat-square)
 
 Google API, Client and Services for Elgg
 

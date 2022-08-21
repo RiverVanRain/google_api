@@ -11,7 +11,7 @@
 return [
 	'plugin' => [
 		'name' => 'Google API',
-		'version' => '0.3.1',
+		'version' => '0.3.2',
 		'activate_on_install' => false,
 	],
 	
@@ -26,6 +26,14 @@ return [
 		'admin/google/api_key' => [
 			'controller' => \wZm\Google\Actions\SettingsAction::class,
 			'access' => 'admin',
+		],
+	],
+	
+	'hooks' => [
+		'register' => [
+			'menu:page' => [
+				\wZm\Google\SetupAdminMenu::class => [],
+			],
 		],
 	],
 ];

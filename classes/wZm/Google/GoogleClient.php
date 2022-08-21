@@ -73,13 +73,13 @@ class GoogleClient {
 				}
 
 				if (is_null($new_value)) {
-					register_error('Google API (set setting): Can not parse new value for "' . $key . '"');
+					elgg_register_error_message('Google API (set setting): Can not parse new value for "' . $key . '"');
 					$error++;
 					continue;
 				}
 
 				if (!$plugin->setSetting($key, $new_value)) {
-					register_error('Google API (set setting): Unable to set new value for "' . $key . '"');
+					elgg_register_error_message('Google API (set setting): Unable to set new value for "' . $key . '"');
 					$error++;
 				}
 			}

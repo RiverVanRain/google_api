@@ -9,14 +9,9 @@
 **/
 namespace wZm\Google;
 
-use Elgg\PluginBootstrap;
-use Elgg\Includer;
+use Elgg\DefaultPluginBootstrap;
 
-class Bootstrap extends PluginBootstrap {
-
-	protected function getRoot() {
-		return $this->plugin->getPath();
-	}
+class Bootstrap extends DefaultPluginBootstrap {
 	/**
 	 * Executed during 'plugin_boot:before', 'system' event
 	 *
@@ -25,7 +20,7 @@ class Bootstrap extends PluginBootstrap {
 	 * @return void
 	 */
 	public function load() {
-		Includer::requireFileOnce($this->getRoot() . '/autoloader.php');
+
 	}
 
 	/**
@@ -48,7 +43,7 @@ class Bootstrap extends PluginBootstrap {
 	 * @return void
 	 */
 	public function init() {
-		elgg_register_plugin_hook_handler('register', 'menu:page', SetupAdminMenu::class);
+
 	}
 
 	/**
