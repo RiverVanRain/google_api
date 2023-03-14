@@ -11,7 +11,7 @@
 return [
 	'plugin' => [
 		'name' => 'Google API',
-		'version' => '0.3.2',
+		'version' => '0.4.0',
 		'activate_on_install' => false,
 	],
 	
