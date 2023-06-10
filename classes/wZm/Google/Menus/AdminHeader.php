@@ -7,26 +7,23 @@
  * @copyright (c) Nikolai Shcherbin 2021
  * @link https://wzm.me
 **/
-namespace wZm\Google;
+namespace wZm\Google\Menus;
 
-class SetupAdminMenu {
-	public function __invoke(\Elgg\Hook $hook) {
-		$menu = $hook->getValue();
+class AdminHeader {
+	public function __invoke(\Elgg\Event $event) {
+		$menu = $event->getValue();
 		/* @var $menu \Elgg\Collections\Collection */
 
 		$menu->add(\ElggMenuItem::factory([
 			'name' => 'google',
 			'text' => elgg_echo('admin:google'),
-			'section' => 'develop',
-			'context' => ['admin'],
+			'href' => false,
 		]));
 		
 		$menu->add(\ElggMenuItem::factory([
 			'name' => 'google:api_key',
 			'text' => elgg_echo('admin:google:api_key'),
 			'href' => 'admin/google/api_key',
-			'section' => 'develop',
-			'context' => ['admin'],
 			'parent_name' => 'google',
 		]));
 		
@@ -34,8 +31,6 @@ class SetupAdminMenu {
 			'name' => 'google:import',
 			'text' => elgg_echo('admin:google:import'),
 			'href' => 'admin/google/import',
-			'section' => 'develop',
-			'context' => ['admin'],
 			'parent_name' => 'google',
 		]));
 

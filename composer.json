@@ -15,9 +15,9 @@
 		}
 	],
 	"config": {
-              "fxp-asset": {
-                   "enabled": false
-              },
+        "fxp-asset": {
+            "enabled": false
+        },
 		"allow-plugins": {
 			"composer/installers": true
 		}
@@ -25,21 +25,21 @@
 	"require": {
 		"php": "^8.1",
 		"composer/installers": "^1.0.8",
-		"google/apiclient": "^2.13.1"
+		"google/apiclient": "^2.15.0"
 	},
 	"autoload": {
 		"psr-0": {
 			"": "classes/"
 		}
 	},
-        "repositories": [
-                {
-                   "type": "composer",
-                   "url": "https://asset-packagist.org"
-                }
-        ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
 	"conflict": {
-		"elgg/elgg": "<4.3"
+		"elgg/elgg": "<5.0"
 	},
 	"support": {
 		"source": "https://github.com/rivervanrain/google_api"

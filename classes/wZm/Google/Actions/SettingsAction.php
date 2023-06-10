@@ -9,12 +9,9 @@
 **/
 namespace wZm\Google\Actions;
 
-use Elgg\Http\ResponseBuilder;
-use Elgg\Request;
-
 class SettingsAction {
 
-	public function __invoke(Request $request) {
+	public function __invoke(\Elgg\Request $request) {
 
 		$params = $request->getParam('params');
 		$flush_cache = $request->getParam('flush_cache');

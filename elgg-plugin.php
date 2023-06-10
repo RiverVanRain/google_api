@@ -11,7 +11,7 @@
 return [
 	'plugin' => [
 		'name' => 'Google API',
-		'version' => '0.4.0',
+		'version' => '1.0.0',
 		'activate_on_install' => false,
 	],
 	
@@ -29,10 +29,10 @@ return [
 		],
 	],
 	
-	'hooks' => [
+	'events' => [
 		'register' => [
-			'menu:page' => [
-				\wZm\Google\SetupAdminMenu::class => [],
+			'menu:admin_header' => [
+				\wZm\Google\Menus\AdminHeader::class => [],
 			],
 		],
 	],

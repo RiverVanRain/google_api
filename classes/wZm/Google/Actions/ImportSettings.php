@@ -2,12 +2,11 @@
 
 namespace wZm\Google\Actions;
 
-use Elgg\Request;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class ImportSettings {
 
-	public function __invoke(Request $request) {
+	public function __invoke(\Elgg\Request $request) {
 		$file = elgg_get_uploaded_file('json');
 
 		if ($file instanceof UploadedFile && $file->isValid()) {
