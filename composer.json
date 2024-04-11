@@ -19,12 +19,11 @@
             "enabled": false
         },
 		"allow-plugins": {
-			"composer/installers": true
+			"composer/installers": false
 		}
         },
 	"require": {
-		"php": "^8.1",
-		"composer/installers": "^1.0.8",
+		"php": "^8.2",
 		"google/apiclient": "^2.15.0"
 	},
 	"autoload": {
@@ -39,7 +38,7 @@
         }
     ],
 	"conflict": {
-		"elgg/elgg": "<5.0"
+		"elgg/elgg": "<5.1"
 	},
 	"support": {
 		"source": "https://github.com/rivervanrain/google_api"
