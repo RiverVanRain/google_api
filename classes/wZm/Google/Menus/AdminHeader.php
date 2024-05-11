@@ -10,7 +10,11 @@
 namespace wZm\Google\Menus;
 
 class AdminHeader {
-	public function __invoke(\Elgg\Event $event) {
+	public function __invoke(\Elgg\Event $event): ?\Elgg\Menu\MenuItems {
+		if (!elgg_is_admin_logged_in() || !elgg_in_context('admin')) {
+			return null;
+		}
+		
 		$menu = $event->getValue();
 		/* @var $menu \Elgg\Collections\Collection */
 
